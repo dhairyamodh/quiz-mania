@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@layer base {
+  :root {
+    --background: 60, 29%, 93%, 1; /* Cream */
+    --foreground: 0 0% 22%; /* Dark Gray */
+    --card: 60, 29%, 93%, 1; /* Same as background */
+    --card-foreground: 0 0% 22%; /* Dark Gray */
+    --popover: 60, 29%, 93%, 1; /* Cream */
+    --popover-foreground: 0 0% 22%; /* Dark Gray */
+    --primary: 340 52% 37%; /* Dark Maroon */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 0, 0%, 85%, 1; /* Light Gray */
+    --secondary-foreground: 0 0% 22%; /* Dark Gray */
+    --muted: 0, 0%, 85%, 1; /* Light Gray */
+    --muted-foreground: 0 0% 46%; /* Gray */
+    --accent: 10 58% 77%; /* Light Pink */
+    --accent-foreground: 0 0% 22%; /* Dark Gray */
+    --destructive: 355 61% 57%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+    --border: 0, 0%, 85%, 1; /* Light Gray */
+    --input: 0, 0%, 85%, 1; /* Light Gray */
+    --ring: 340 52% 37%; /* Dark Maroon */
+    --radius: 0.5rem; /* Same as default */
+    --chart-1: 12 76% 61%; /* Preserving from original */
+    --chart-2: 173 58% 39%; /* Preserving from original */
+    --chart-3: 197 37% 24%; /* Preserving from original */
+    --chart-4: 43 74% 66%; /* Preserving from original */
+    --chart-5: 27 87% 67%; /* Preserving from original */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
