@@ -24,7 +24,7 @@ const QuizQuestions = () => {
       setTimer((prev) => {
         if (prev <= 1) {
           // Move to the next question
-          // handleNextQuestion();
+          handleNextQuestion();
           return 10; // Reset timer for the next question
         }
         return prev - 1;
@@ -33,6 +33,7 @@ const QuizQuestions = () => {
 
     // Clear the interval on component unmount
     return () => clearInterval(countdown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeQuestion]); // Run effect when activeQuestion changes
 
   const handleNextQuestion = () => {
